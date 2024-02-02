@@ -9,7 +9,7 @@ Welcome to ament_cmake's documentation!
 .. Generate this list manually with the following command:
 
 .. toctree::
-   :maxdepth: 1
+   :maxdepth: 2
    :caption: Contents:
 
 
@@ -45,3 +45,11 @@ Indices and tables
 * :ref:`genindex`
 * :ref:`modindex`
 * :ref:`search`
+
+
+Table of Contents
+^^^^^^^^^^^^^^^^^
+.. toctree::
+    :maxdepth: 2
+    self
+    api/index

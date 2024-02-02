@@ -3,6 +3,13 @@
 # For the full list of built-in configuration values, see the documentation:
 # https://www.sphinx-doc.org/en/master/usage/configuration.html
 
+# https://medium.com/practical-coding/c-documentation-with-doxygen-cmake-sphinx-breathe-for-those-of-use-who-are-totally-lost-part-2-21f4fb1abd9f
+from sphinx.builders.html import StandaloneHTMLBuilder
+import subprocess, os
+
+# Doxygen
+subprocess.call('doxygen', shell=True)
+
 # -- Project information -----------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
@@ -15,6 +22,7 @@ release = '2.3.2'
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
 
 # https://gitlab.com/Pro1/doxygen-cmake-sphinx/-/blob/master/doc/conf.py.in
+# python3 -m pip install breathe sphinxcontrib-moderncmakedomain
 extensions = [
     'sphinx.ext.autodoc',
     'sphinx.ext.intersphinx',
@@ -28,7 +36,7 @@ extensions = [
     # 'sphinx_sitemap',
     'sphinx.ext.inheritance_diagram',
     # Could not import extension breathe (exception: No module named 'breathe')
-    # 'breathe',
+    'breathe',
     'sphinxcontrib.moderncmakedomain'
 ]
 
